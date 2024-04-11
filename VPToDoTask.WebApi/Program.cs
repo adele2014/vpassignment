@@ -15,6 +15,7 @@ try
 {
     var builder = WebApplication.CreateBuilder(args);
     // load up serilog configuraton
+    
     Log.Logger = new LoggerConfiguration()
     .ReadFrom.Configuration(builder.Configuration)
     .Enrich.FromLogContext()
