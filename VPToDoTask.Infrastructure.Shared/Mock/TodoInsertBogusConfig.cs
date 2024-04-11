@@ -10,7 +10,7 @@ namespace VPToDoTask.Infrastructure.Shared.Mock
         public TodoInsertBogusConfig()
         {
             RuleFor(o => o.Id, f => Guid.NewGuid());
-            RuleFor(o => o.Name, f => f.Name.JobTitle());
+            RuleFor(o => o.Name, f => f.Name.JobType());
             RuleFor(o => o.Created, f => f.Date.Past(1));
             RuleFor(o => o.CreatedBy, f => f.Name.FullName());
             RuleFor(o => o.LastModified, f => f.Date.Recent(1));
